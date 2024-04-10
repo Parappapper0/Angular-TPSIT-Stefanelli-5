@@ -1,0 +1,17 @@
+
+<div *ngIf="!logged">
+    Username: <input type="text" [(ngModel)]="username" required>
+    <br/>
+    Password: <input type="password" [(ngModel)]="password" required>
+    <br/>
+    Email: <input type="email" [(ngModel)]="mail">
+    <br/>
+    Name: <input type="text" [(ngModel)]="name">
+    <br/>
+    Surname: <input type="text" [(ngModel)]="surname">
+    <br/>
+    <button (click)="login()">Login</button>
+    <button (click)="registra()">Registra</button>
+</div>
+<p *ngIf="logged && successful_login">Benvenuto sul sito</p>
+<p *ngIf="logged && !successful_login">Credenziali errate</p>
