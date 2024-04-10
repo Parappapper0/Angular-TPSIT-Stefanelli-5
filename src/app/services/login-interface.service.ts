@@ -13,7 +13,7 @@ export class LoginInterfaceService {
 
   tryLogin(username : string, password : string, mail : string, name : string, surname : string) {
     let http_headers = new HttpHeaders().set("Content-Type", "application/json");
-    return this.httpClient.post<Valid>("http://127.0.0.1:8080/login",
+    return this.httpClient.post<Valid>("http://localhost:4200/api/login",
      '{"username":"' + username + 
      '", "password":"' + password +
      '", "email":"' + mail +
@@ -24,7 +24,7 @@ export class LoginInterfaceService {
 
   register(username : string, password : string, mail : string, name : string, surname : string) {
     let http_headers = new HttpHeaders().set("Content-Type", "application/json");
-    return this.httpClient.post<User>("http://127.0.0.1:8080/register",
+    return this.httpClient.post<User>("http://localhost:4200/api/register",
     '{"username":"' + username + 
     '", "password":"' + password +
     '", "email":"' + mail +
